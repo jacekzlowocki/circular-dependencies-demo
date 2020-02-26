@@ -7,9 +7,9 @@ export function renderApp(element) {
     <p>Hello World!</p>
     <p>Modules:</p>
     <ul>
-      <li>${moduleAName}, ${moduleADescription}</li>
-      <li>${moduleBName}, ${moduleBDescription}</li>
-      <li>${moduleCName}, ${moduleCDescription}</li>
+      <li>${moduleAName}, ${moduleADescription()}</li>
+      <li>${moduleBName}, ${moduleBDescription()}</li>
+      <li>${moduleCName}, ${moduleCDescription()}</li>
     </ul>
   `;
 }
