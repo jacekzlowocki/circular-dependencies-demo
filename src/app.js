@@ -1,15 +1,16 @@
-import { moduleAName, moduleADescription } from "./moduleA";
-import { moduleBName, moduleBDescription } from "./moduleB";
-import { moduleCName, moduleCDescription } from "./moduleC";
+import { moduleAName } from "./moduleA";
+import { moduleBName } from "./moduleB";
+import { moduleCName } from "./moduleC";
+import { getModuleDescription } from "./modulesDescriptions";
 
 export function renderApp(element) {
   element.innerHTML = `
     <p>Hello World!</p>
     <p>Modules:</p>
     <ul>
-      <li>${moduleAName}, ${moduleADescription()}</li>
-      <li>${moduleBName}, ${moduleBDescription()}</li>
-      <li>${moduleCName}, ${moduleCDescription()}</li>
+      <li>${moduleAName}, ${getModuleDescription(moduleAName)}</li>
+      <li>${moduleBName}, ${getModuleDescription(moduleBName)}</li>
+      <li>${moduleCName}, ${getModuleDescription(moduleCName)}</li>
     </ul>
   `;
 }
